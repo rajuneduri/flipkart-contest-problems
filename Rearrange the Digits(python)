@@ -1,0 +1,19 @@
+
+class Solution:
+    def smallestnum (self,N):
+        L=list(str(N))
+        L.sort()
+        L1=[]
+        for i in range(0,len(L)):
+            if(L[i]!='0'):
+                L1.append(L[i])
+                L.remove(L[i])
+                break
+        for i in range(0,len(L)):
+            L1.append(L[i])
+        s=''
+        for i in range(0,len(L1)):
+            s=s+str(L1[i])
+        return s
+            
+            
